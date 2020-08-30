@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #717171;
+  min-width: 1200px;
+}
+
+/* START HEADER */
+
+header {
+  padding: 18px 0px;
+  background-color: white;
+}
+
+.wrapper {  
+  width: 1200px !important;
+  padding: 0px 30px;
+  margin: auto;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  margin: 0px -12px;
+  text-align: center;
+}
+
+header nav a {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #3E2F73;
+  margin: 0px 12px;
+}
+
+header nav a:hover {
+  text-decoration: none;
+}
+
+/* END HEADER */
+
+/* START BANNER */
+
+.banner {
+  background-image: url('../imgs/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+.banner .cover {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background: linear-gradient(90deg, rgba(62, 47, 115, 0.8) 0%, rgba(208, 34, 127, 0.8) 100%);
+}
+
+.banner .cover .row > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+      /* Preview Box */
+
+      .banner .preview-box {  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .banner .preview-box .pre-preview {
+        height: 45px;
+      }
+
+      .banner .preview-box .preview {
+        display: block;
+        position: relative;
+        background-image: url('../imgs/preview.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-bottom: 62.4%;
+        margin-top: 22px;
+        margin-bottom: 16px;
+        width: 100%;
+      }
+
+      .banner .preview-box .preview svg {
+        position: absolute;
+        left: calc(50% - 66px);
+        top: calc(50% - 66px);
+      }
+
+      .banner .preview-box .below-preview {
+        font-size: 32px;
+        line-height: 150%;
+        font-weight: 600;
+      }
+
+      .banner .preview-box .below-preview span:nth-of-type(1) {
+        margin-right: 22px;
+      }
+
+      /* Register Box */
+
+      .banner .register-box {
+        background: #3E2F73;
+        border-radius: 10px;
+        padding: 30px;
+        width: 342px;
+        margin: 30px 0px;
+      }
+
+      .banner .register-box h1 {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 150%;
+      }
+
+      .banner .register-box p {
+        font-size: 21px;  
+        line-height: 150%;
+      }
+
+      .banner .register-box input {
+        display: block;
+        width: 100%;
+        font-weight: 500;
+        font-size: 18px;
+        color: #C7C7C7;
+        background: #F7F7F7;
+        border-radius: 5px;
+        border: 0px;
+        margin-bottom: 16px;
+        padding: 4px 13px;
+      }
+
+      .banner .register-box button {
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 150%;
+        color: white;
+        background: #D0227F;
+        border-radius: 5px;
+        border: 0px;
+        padding-top: 4px;
+        padding-bottom: 9px;
+        width: 112px; 
+      }
+
+      .banner .register-box button:hover {
+        filter: brightness(1.2)
+      }
+
+/* END BANNER */
+
+.section-title {
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+  margin-left: 120px;
+}
+
+.section-title > svg:nth-of-type(1) {
+  position: absolute;
+  top: 8px;
+  left: -120px;
+}
+
+/* START PALESTRAS */
+
+#palestras {
+  overflow-x: hidden;
+}
+
+#palestras .wrapper {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#palestras .background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 690px;
+  right: calc((1200px - 100vw) / 2);
+  background-color: black;
+  background-image: url('../imgs/summonersrift.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+#palestras .background svg {
+  width: 150px;
+  height: 100%;
+}
+
+#palestras .section-title {  
+  color: #3E2F73;
+}
+
+#palestras .description {
+  margin-left: 120px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: justify;
+}
+
+#palestras .palestra {
+  margin-left: 120px;
+  position: relative;
+}
+
+#palestras .palestra > div {
+  position: absolute;
+  left: -120px;
+  padding-top: 4px;
+}
+
+#palestras .palestra > div > svg {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#palestras .palestra > div > svg:nth-of-type(1) {
+  margin-left: 10px;
+}
+
+#palestras .palestra > div > svg:nth-of-type(2) {
+  margin-left: 27px;
+}
+
+#palestras .palestra > div > svg:nth-of-type(3) {
+  margin-left: 42px;
+}
+
+#palestras .palestra > p {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  text-align: justify;
+}
+
+#palestras .palestra > p > strong {
+  color: #D0227F;
+}
+
+#palestras .play {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#palestras .play a {
+  position: relative;
+  display: block;
+  width: 300px;
+  padding: 60px 0px;
+  background: white;
+  text-align: center;
+  border: 3px solid #D0227F;
+  border-radius: 15px;
+}
+
+#palestras .play a svg {
+  position: absolute;
+  left: -22.5px;
+  top: 72.5px;
+}
+
+/* END PALESTRAS */
+
+/* START PALESTRANTES */
+
+#palestrantes {
+  background-image: url('../imgs/background2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+#palestrantes .cover {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  background: rgba(40, 1, 62, 0.8);
+}
+
+#palestrantes .section-title {
+  margin-bottom: 45px;
+}
+
+#palestrantes .palestrante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 20px;
+  margin-bottom: 23px;
+}
+
+#palestrantes .palestrante .foto {
+  height: 174px;
+  width: 174px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+}
+
+#palestrantes .palestrante h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+#palestrantes .palestrante p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* END PARTICIPANTES */
+
+/* START CAMPEONATOS */
+
+#campeonatos .wrapper {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#campeonatos .section-title {
+  color: #3E2F73;
+  margin-bottom: 57px;
+}
+
+#campeonatos .section-title span {
+  margin-left: 21px;
+  color: white;
+  -webkit-text-stroke: 2px #3E2F73;
+}
+
+#campeonatos .campeonato {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 483px;
+}
+
+#campeonatos .campeonato .background {
+  position: absolute;
+  left: 172px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#campeonatos .campeonato .info {
+  width: 307px;
+  padding: 26px;
+  background: white;
+  border: 3px solid #D0227F;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#campeonatos .campeonato .info h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color:#3E2F73;
+  margin-bottom: 25px;
+}
+
+#campeonatos .campeonato .info h1 small {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  transform: translateY(-4px);
+}
+
+#campeonatos .campeonato .info .description {
+  width: 228px;
+  text-align: left;    
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  margin-bottom: 25px;
+}
+
+#campeonatos .campeonato .info .description span {
+  display: block;
+  color: #D0227F;
+}
+
+#campeonatos .campeonato .info a {
+  display: block;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 150%;
+  color: white;
+  background: #D0227F;
+  border-radius: 5px;
+  border: 0px;
+  padding-top: 4px;
+  padding-bottom: 9px;
+  width: 225px; 
+  text-align: center;
+}
+
+#campeonatos .campeonato .info a:hover {
+  text-decoration: none;
+  filter:brightness(1.2);
+}
+
+#campeonatos .campeonato .obs {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+  color: #101010;
+  width: 225px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+#campeonatos .obs2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: right;
+  color: #101010;
+  margin-top: 11px;
+}
+
+/* END CAMPEONATOS */
+
+#inscricao .wrapper {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#inscricao .section-title {
+  color: #D0227F;
+  margin-bottom: 57px;
+}
+
+      /* Register Box */
+
+      #inscricao .register-box {
+        background: #3E2F73;
+        border-radius: 10px;
+        padding: 30px;
+        width: 100%;
+        margin: 30px 0px;
+        color: white;
+      }
+
+      #inscricao .register-box h1 {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 150%;
+      }
+
+      #inscricao .register-box p {
+        font-size: 21px;  
+        line-height: 150%;
+      }
+
+      #inscricao .register-box input {
+        display: block;
+        width: 100%;
+        font-weight: 500;
+        font-size: 18px;
+        color: #C7C7C7;
+        background: #F7F7F7;
+        border-radius: 5px;
+        border: 0px;
+        margin-bottom: 16px;
+        padding: 4px 13px;
+      }
+
+      #inscricao .register-box button {
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 150%;
+        color: white;
+        background: #D0227F;
+        border-radius: 5px;
+        border: 0px;
+        padding-top: 4px;
+        padding-bottom: 9px;
+        width: 200px; 
+      }
+
+      #inscricao .register-box button:hover {
+        filter: brightness(1.2)
+      }
+
+footer h1 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  text-align: center;
+  color: #3E2F73;
+  margin-bottom: 95px;
+}
+
+footer h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #101010;
+  margin-bottom: 45px;
+}
+
+footer .socials {
+  display: flex;     
+  align-items: center;
+}
+
+footer .socials > a {
+  display: inline-flex;        
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin-right: 20px;
+}
+
+footer .instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #3E2F73;
+  border-radius: 50%;
+}
+
+footer .instagram svg {
+  margin-left: -1px;
+}
+
+footer .parceiro {
+  text-align: center;
+  margin-top: 85px;
+  margin-bottom: 130px;
+}
+
+footer .parceiro a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 150%;
+  color: white;
+  background: #D0227F;
+  border-radius: 5px;
+  border: 0px;
+  padding-top: 4px;
+  padding-bottom: 9px;
+  width: 143px; 
+  text-align: center;
+  margin-left: 20px;
+}
+
+footer .parceiro a:hover {
+  text-decoration: none;
+  filter:brightness(1.2);
+}
