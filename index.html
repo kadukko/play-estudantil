@@ -40,8 +40,9 @@
             <div class="col">
               <div class="preview-box">
                 <img class="pre-preview" src="assets/imgs/play-estudantil.png" alt="Play Estudantil" />
-                <a class="preview" src="#">
-                  <svg width="132" height="132" viewBox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="preview" src="#">
+                  <!-- <svg width="132" height="132" viewBox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="showEmbed()">
                     <g filter="url(#filter0_d)">
                       <circle cx="66" cy="66" r="39" fill="white" />
                     </g>
@@ -59,8 +60,9 @@
                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
                       </filter>
                     </defs>
-                  </svg>
-                </a>
+                  </svg> -->
+                  <iframe src="https://www.youtube.com/embed/nWV_KCA10Rw" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <div class="below-preview">
                   <span>100% Online</span><span style="color: rgb(4, 192, 0)">100% Gratuito</span>
                 </div>
@@ -331,6 +333,10 @@
 
       $("#palestras .background").css("right", right);
     })
+
+    // function showEmbed() {
+    //   $('.preview-box .preview').addClass('show');
+    // }
   </script>
 </body>
 
