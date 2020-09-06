@@ -126,11 +126,48 @@ header nav a:hover {
       /* Register Box */
 
       .banner .register-box {
+        position: relative;
         background: #3E2F73;
         border-radius: 10px;
         padding: 30px;
         width: 342px;
         margin: 30px 0px;
+      }
+
+      .banner .register-box .counter {
+        position: absolute;
+        top: -100px;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 65px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .banner .register-box .counter .days,
+      .banner .register-box .counter .hours,
+      .banner .register-box .counter .minutes {
+        position: absolute;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .banner .register-box .counter .days {
+        left: 20px;
+        top: 65px;
+      }
+
+      .banner .register-box .counter .hours {
+        left: 125px;
+        top: 65px;
+      }
+
+      .banner .register-box .counter .minutes {
+        left: 225px;
+        top: 65px;
       }
 
       .banner .register-box h1 {
@@ -323,10 +360,19 @@ header nav a:hover {
 
 #palestrantes .palestrante {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0px 20px;
   margin-bottom: 23px;
+  width: 480px;
+}
+
+#palestrantes .palestrante-info {
+  width: 520px;
+  margin-bottom: 60px;
+}
+
+#palestrantes .palestrante .titulo {
+  padding: 0px 30px;
+  padding-top: 40px;
 }
 
 #palestrantes .palestrante .foto {
@@ -343,7 +389,6 @@ header nav a:hover {
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 9px;
 }
@@ -352,7 +397,6 @@ header nav a:hover {
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -360,30 +404,52 @@ header nav a:hover {
 
 /* START CAMPEONATOS */
 
-#campeonatos .wrapper {
+#campeonato .wrapper {
+  position: relative;
   padding-top: 40px;
   padding-bottom: 30px;
 }
 
-#campeonatos .section-title {
-  color: #3E2F73;
-  margin-bottom: 57px;
+#campeonato .wrapper .greenx {
+  position: absolute;
+  top: 53px;
+  right: 0px;
 }
 
-#campeonatos .section-title span {
+#campeonato .cover .wrapper .greenx {
+  position: absolute;
+  top: 528px;
+  right: 632px;
+}
+
+#campeonato .cover .wrapper {
+  position: relative;
+  padding: 0px;
+}
+
+#campeonato .section-title {
+  color: #3E2F73;
+  margin-bottom: 0px;
+}
+
+#campeonato .cover {
+  background-color: #3E2F73;
+}
+
+#campeonato .section-title span {
   margin-left: 21px;
   color: white;
   -webkit-text-stroke: 2px #3E2F73;
 }
 
-#campeonatos .campeonato {
+#campeonato .campeonato {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  height: 483px;
+  height: 605px;
 }
 
-#campeonatos .campeonato .background {
+#campeonato .campeonato .background {
   position: absolute;
   left: 172px;
   top: 0;
@@ -394,8 +460,8 @@ header nav a:hover {
   background-repeat: no-repeat;
 }
 
-#campeonatos .campeonato .info {
-  width: 307px;
+#campeonato .campeonato .info {
+  width: 324px;
   padding: 26px;
   background: white;
   border: 3px solid #D0227F;
@@ -405,26 +471,28 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 70px;
 }
 
-#campeonatos .campeonato .info h1 {
+#campeonato .campeonato .info h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
   text-transform: uppercase;
   color:#3E2F73;
   margin-bottom: 25px;
+  text-align:center;
 }
 
-#campeonatos .campeonato .info h1 small {
+#campeonato .campeonato .info h1 small {
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
   transform: translateY(-4px);
 }
 
-#campeonatos .campeonato .info .description {
-  width: 228px;
+#campeonato .campeonato .info .description {
+  width: 100%;
   text-align: left;    
   font-weight: 600;
   font-size: 18px;
@@ -432,12 +500,12 @@ header nav a:hover {
   margin-bottom: 25px;
 }
 
-#campeonatos .campeonato .info .description span {
+#campeonato .campeonato .info .description span {
   display: block;
   color: #D0227F;
 }
 
-#campeonatos .campeonato .info a {
+#campeonato .campeonato .info a {
   display: block;
   font-weight: 600;
   font-size: 21px;
@@ -448,33 +516,35 @@ header nav a:hover {
   border: 0px;
   padding-top: 4px;
   padding-bottom: 9px;
-  width: 225px; 
+  width: 100%;
   text-align: center;
 }
 
-#campeonatos .campeonato .info a:hover {
+#campeonato .campeonato .info a:hover {
   text-decoration: none;
   filter:brightness(1.2);
 }
 
-#campeonatos .campeonato .obs {
+#campeonato .campeonato .obs {
   font-weight: bold;
   font-size: 12px;
   line-height: 150%;
   text-align: center;
   color: #101010;
-  width: 225px;
+  width: 100%;
   margin-top: 30px;
   margin-bottom: 0px;
 }
 
-#campeonatos .obs2 {
+#campeonato .obs2 {
   font-weight: bold;
   font-size: 18px;
   line-height: 150%;
   text-align: right;
-  color: #101010;
-  margin-top: 11px;
+  color: white;
+  position: absolute;
+  bottom: 40px;
+  right: 180px;
 }
 
 /* END CAMPEONATOS */
