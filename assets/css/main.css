@@ -3,8 +3,13 @@
 body {
   font-family: 'Lato', sans-serif;
   color: #717171;
-  min-width: 1200px;
+  overflow-x: scroll;
 }
+
+.container {
+  overflow-x: hidden;
+}
+
 
 /* START HEADER */
 
@@ -13,13 +18,7 @@ header {
   background-color: white;
 }
 
-.wrapper {  
-  width: 1200px !important;
-  padding: 0px 30px;
-  margin: auto;
-}
-
-header .wrapper {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,11 +61,53 @@ header nav a:hover {
   background: linear-gradient(90deg, rgba(62, 47, 115, 0.8) 0%, rgba(208, 34, 127, 0.8) 100%);
 }
 
+.banner > .cover > .container > .row {
+  min-height: 600px;
+}
+
 .banner .cover .row > div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+      /* Counter */
+
+      .banner .counter {
+        position: relative;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 65px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        min-width: 291px;
+      }
+
+      .banner .counter .days,
+      .banner .counter .hours,
+      .banner .counter .minutes {
+        position: absolute;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .banner .counter .days {
+        left: 20px;
+        top: 65px;
+      }
+
+      .banner .counter .hours {
+        left: 125px;
+        top: 65px;
+      }
+
+      .banner .counter .minutes {
+        left: 225px;
+        top: 65px;
+      }
 
       /* Preview Box */
 
@@ -80,6 +121,11 @@ header nav a:hover {
 
       .banner .preview-box .pre-preview {
         height: 45px;
+        transform: scale(0.7)
+      }
+
+      .banner .preview-box .counter {
+        margin: 30px;
       }
 
       .banner .preview-box .preview {
@@ -95,23 +141,12 @@ header nav a:hover {
         width: 100%;
       }
 
-      /* .banner .preview-box .preview svg {
-        position: absolute;
-        left: calc(50% - 66px);
-        top: calc(50% - 66px);
-        cursor: pointer;
-      } */
-
       .banner .preview-box .preview iframe {
         /* display: none; */
         position: absolute;
         width: 100%;
         height: 100%;
       }
-
-      /* .banner .preview-box .preview.show iframe {
-        display: block;
-      } */
 
       .banner .preview-box .below-preview {
         font-size: 32px;
@@ -126,44 +161,13 @@ header nav a:hover {
         background: #3E2F73;
         border-radius: 10px;
         padding: 30px;
-        width: 342px;
         margin: 30px 0px;
       }
 
       .banner .register-box .counter {
+        display: none;
         position: absolute;
         top: -100px;
-        font-weight: 600;
-        font-size: 54px;
-        line-height: 65px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-      }
-
-      .banner .register-box .counter .days,
-      .banner .register-box .counter .hours,
-      .banner .register-box .counter .minutes {
-        position: absolute;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 14px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-      }
-
-      .banner .register-box .counter .days {
-        left: 20px;
-        top: 65px;
-      }
-
-      .banner .register-box .counter .hours {
-        left: 125px;
-        top: 65px;
-      }
-
-      .banner .register-box .counter .minutes {
-        left: 225px;
-        top: 65px;
       }
 
       .banner .register-box h1 {
@@ -216,10 +220,11 @@ header nav a:hover {
   font-size: 48px;
   line-height: 58px;
   text-transform: uppercase;
-  margin-left: 120px;
+  text-align:center;
 }
 
 .section-title > svg:nth-of-type(1) {
+  display: none;
   position: absolute;
   top: 8px;
   left: -120px;
@@ -231,13 +236,15 @@ header nav a:hover {
   overflow-x: hidden;
 }
 
-#palestras .wrapper {
+#palestras .container {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
+  overflow: visible;
 }
 
 #palestras .background {
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -254,14 +261,15 @@ header nav a:hover {
 #palestras .background svg {
   width: 150px;
   height: 100%;
+  margin-left: -1px;
 }
 
 #palestras .section-title {  
   color: #3E2F73;
+  margin-bottom: 30px;
 }
 
 #palestras .description {
-  margin-left: 120px;
   font-weight: 500;
   font-size: 24px;
   line-height: 140%;
@@ -269,18 +277,15 @@ header nav a:hover {
 }
 
 #palestras .palestra {
-  margin-left: 120px;
   position: relative;
 }
 
 #palestras .palestra > div {
-  position: absolute;
-  left: -120px;
   padding-top: 4px;
 }
 
 #palestras .palestra > div > svg {
-  display: block;
+  display: none;
   margin-bottom: 8px;
 }
 
@@ -358,11 +363,10 @@ header nav a:hover {
   display: flex;
   margin: 0px 20px;
   margin-bottom: 23px;
-  width: 480px;
 }
 
 #palestrantes .palestrante-info {
-  width: 520px;
+  max-width: 520px;
   margin-bottom: 60px;
 }
 
@@ -400,25 +404,30 @@ header nav a:hover {
 
 /* START CAMPEONATOS */
 
-#campeonato .wrapper {
+#campeonato {
+  overflow-x: hidden;
+}
+
+#campeonato .container {
   position: relative;
   padding-top: 40px;
   padding-bottom: 30px;
+  overflow-x: visible;
 }
 
-#campeonato .wrapper .greenx {
+#campeonato .container .greenx {
   position: absolute;
   top: 53px;
-  right: 0px;
+  left: 500px;
 }
 
-#campeonato .cover .wrapper .greenx {
+#campeonato .cover .container .greenx {
   position: absolute;
   top: 528px;
-  right: 632px;
+  left: -400px;
 }
 
-#campeonato .cover .wrapper {
+#campeonato .cover .container {
   position: relative;
   padding: 0px;
 }
@@ -450,7 +459,7 @@ header nav a:hover {
   left: 172px;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -95px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -545,7 +554,7 @@ header nav a:hover {
 
 /* END CAMPEONATOS */
 
-#inscricao .wrapper {
+#inscricao .container {
   padding-top: 40px;
   padding-bottom: 30px;
 }
@@ -627,6 +636,8 @@ footer h2 {
 footer .socials {
   display: flex;     
   align-items: center;
+  justify-content: center;
+  width: auto;
 }
 
 footer .socials > a {
@@ -635,6 +646,10 @@ footer .socials > a {
   justify-content: center;
   height: 50px;
   margin-right: 20px;
+}
+
+footer .socials > a:last-of-type {
+  margin-right: 0px;
 }
 
 footer .instagram {
@@ -676,4 +691,66 @@ footer .parceiro a {
 footer .parceiro a:hover {
   text-decoration: none;
   filter:brightness(1.2);
+}
+
+@media screen and (min-width: 768px) {
+  .containter {
+    overflow: visible;
+  }
+  
+  .section-title {
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .section-title > svg:nth-of-type(1) {
+    display: block;
+  }
+
+  #palestras .section-title {
+    margin-bottom: 0px;
+  }
+
+  #palestras .description {
+    margin-left: 120px;
+  }
+
+  #palestras .palestra {
+    margin-left: 120px;
+  }
+  
+  #palestras .palestra > div {
+    position: absolute;
+    left: -120px;
+  }
+  
+  #palestras .palestra > div > svg {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .banner .register-box {        
+    margin-bottom: -50px;
+    width: 342px;
+  }
+
+  .banner .preview-box .counter {
+    display: none;
+  }
+
+  .banner .register-box .counter {
+    display: block;
+  } 
+  
+}
+
+@media screen and (min-width: 1200px) {
+  #palestras .background {    
+    display: block;
+  }
+
+  #campeonato .campeonato .background {
+    right: 0;
+  }
 }
