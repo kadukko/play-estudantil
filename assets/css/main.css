@@ -470,6 +470,14 @@ header nav a:hover {
   text-transform: uppercase;
 }
 
+#palestrantes .carousel .palestrante-info {
+  margin-bottom: 0px;
+  min-height: 452px;
+  max-width: 570px;
+  margin: auto;
+  padding: 0px 30px;
+}
+
 /* END PARTICIPANTES */
 
 /* START CAMPEONATOS */

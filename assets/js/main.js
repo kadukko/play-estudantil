@@ -24,6 +24,13 @@ $(document).ready(() => {
       counter2.text('00 : 00 : 00');
     }
   }, 1000);
+
+  $("#palestrantesCarousel").swiperight(function () {
+    $(this).carousel('prev');
+  });
+  $("#palestrantesCarousel").swipeleft(function () {
+    $(this).carousel('next');
+  });
 })
 
 function showMobileMenu() {
