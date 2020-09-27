@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   color: #717171;
@@ -10,17 +14,83 @@ body {
   overflow-x: hidden;
 }
 
+.mobile-menu {
+  position: fixed;
+  top: 101px;
+  left: -307px;
+  bottom: 0px;
+  width: 100vw;
+  max-width: 307px;
+  transition: left 0.3s;
+  background-color: #FFF;
+  z-index: 1000;
+  padding: 30px 38px;
+}
+
+.mobile-menu nav a {
+  display: block;
+  font-size: 24px;
+  color: #3E2F73;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.mobile-menu .socials {
+  margin-top: 76px;
+}
+
+.mobile-menu .socials a {
+  margin-right: 18px;
+}
+
+.mobile-menu .socials a:last-of-type {
+  margin-right: 0px;
+}
+
+.mobile-menu nav a:hover {
+  text-decoration: none;
+}
+
+body.mobile-menu-show .mobile-menu {
+  left: 0px;
+}
+
+.mobile-menu .close-btn {
+  position: absolute;
+  top: -101px;
+  left: 0px;
+  height: 101px;
+  width: 101px;
+  background-color: #3E2F73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* START HEADER */
 
 header {
   padding: 18px 0px;
   background-color: white;
+  position: relative;
+}
+
+header .toggle {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 101px;
+  width: 101px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -741,8 +811,11 @@ footer .parceiro a:hover {
 
   .banner .register-box .counter {
     display: block;
-  } 
+  }   
   
+  header .container {
+    justify-content: space-between;
+  }
 }
 
 @media screen and (min-width: 1200px) {
